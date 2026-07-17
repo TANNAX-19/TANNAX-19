@@ -1,0 +1,54 @@
+<view class="page">
+  <view class="card head">
+    <view class="section-title">收货地址管理</view>
+    <view class="subtle">支持微信地址导入和手动维护</view>
+  </view>
+
+  <view class="section card">
+    <view class="section-title">地址列表</view>
+    <view wx:if="{{addresses.length}}">
+      <view class="addr-card" wx:for="{{addresses}}" wx:key="id">
+        <view class="addr-top">
+          <view>
+            <view class="addr-name">
+              {{item.name}}
+              <text wx:if="{{item.isDefault}}" class="pill">默认</text>
+            </view>
+            <view class="addr-mobile">{{item.mobile}}</view>
+          </view>
+          <view class="addr-source">{{item.source === 'wechat' ? '微信地址' : '手动地址'}}</view>
+        </view>
+        <view class="addr-line">{{item.province}}{{item.city}}{{item.district}}{{item.detail}}</view>
+        <view class="addr-actions">
+          <button class="btn-ghost mini" data-id="{{item.id}}" bindtap="editAddress">编辑</button>
+          <button class="btn-ghost mini" data-id="{{item.id}}" bindtap="makeDefault">设默认</button>
+          <button class="btn-ghost mini danger" data-id="{{item.id}}" bindtap="removeAddress">删除</button>
+        </view>
+      </view>
+    </view>
+    <view wx:else class="empty-tip">暂无地址，请先新建一个收货地址</view>
+  </view>
+
+  <view class="section card">
+    <view class="section-title">{{form.id ? '编辑地址' : '新增地址'}}</view>
+    <view class="form-grid">
+      <input class="field" placeholder="收货人" value="{{form.name}}" data-field="name" bindinput="bindField" />
+      <input class="field" placeholder="手机号" value="{{form.mobile}}" data-field="mobile" bindinput="bindField" />
+      <input class="field" placeholder="省" value="{{form.province}}" data-field="province" bindinput="bindField" />
+      <input class="field" placeholder="市" value="{{form.city}}" data-field="city" bindinput="bindField" />
+      <input class="field" placeholder="区" value="{{form.district}}" data-field="district" bindinput="bindField" />
+      <input class="field" placeholder="详细地址" value="{{form.detail}}" data-field="detail" bindinput="bindField" />
+    </view>
+    <view class="switch-row">
+      <text>设为默认地址</text>
+      <switch checked="{{form.isDefault}}" bindchange="toggleDefault" />
+    </view>
+    <view class="addr-actions">
+      <button class="btn-ghost action" bindtap="pickWechatAddress">导入微信地址</button>
+      <button class="btn-primary action" bindtap="saveForm" loading="{{saving}}">保存地址</button>
+    </view>
+    <view class="addr-actions">
+      <button class="btn-ghost action" bindtap="newAddress">清空表单</button>
+    </view>
+  </view>
+</view>

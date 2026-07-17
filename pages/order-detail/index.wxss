@@ -1,0 +1,59 @@
+.head,
+.section {
+  padding: 24rpx;
+  margin-bottom: 24rpx;
+}
+
+.head-top,
+.goods-row,
+.order-total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-pill {
+  padding: 10rpx 18rpx;
+  border-radius: 999rpx;
+  background: linear-gradient(135deg, #2f7d57 0%, #6ea54a 100%);
+  color: #fff;
+}
+
+.timeline {
+  margin-top: 18rpx;
+}
+
+.timeline-item {
+  padding: 10rpx 0;
+  color: #5c6b61;
+}
+
+.goods {
+  padding: 14rpx 0;
+  border-bottom: 1rpx solid #edf0eb;
+}
+
+.goods-name {
+  font-weight: 600;
+  margin-bottom: 8rpx;
+}
+
+.goods-price,
+.order-total {
+  font-weight: 800;
+  color: #1f5c40;
+}
+
+.order-total-row {
+  padding-top: 18rpx;
+}
+
+.actions {
+  display: flex;
+  gap: 16rpx;
+}
+
+.action {
+  flex: 1;
+}
+

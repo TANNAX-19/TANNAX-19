@@ -1,0 +1,20 @@
+{
+  "description": "蜜袋鼯主粮店微信小程序",
+  "miniprogramRoot": "./",
+  "compileType": "miniprogram",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": false,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": false,
+    "ignoreDevUnusedFiles": false,
+    "bigPackageSizeSupport": true
+  },
+  "projectname": "蜜袋鼯主粮店",
+  "appid": "touristappid"
+}
+

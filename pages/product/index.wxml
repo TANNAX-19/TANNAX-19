@@ -1,0 +1,46 @@
+<view class="page" wx:if="{{product}}">
+  <view class="detail-hero card">
+    <view class="detail-top">
+      <view class="detail-mark">主粮精选</view>
+      <view class="detail-badge">{{product.badge}}</view>
+    </view>
+    <view class="detail-name">{{product.name}}</view>
+    <view class="detail-subtitle">{{product.subtitle}}</view>
+    <view class="detail-price-row">
+      <text class="detail-price">{{product.priceText}}</text>
+      <text class="detail-old-price">{{product.originalPriceText}}</text>
+    </view>
+    <view class="detail-tags">
+      <text class="pill" wx:for="{{product.tags}}" wx:for-item="tag" wx:key="*this">{{tag}}</text>
+    </view>
+  </view>
+
+  <view class="section card info">
+    <view class="section-title">商品说明</view>
+    <view class="info-row"><text class="info-label">规格</text><text class="info-value">{{product.spec}}</text></view>
+    <view class="info-row"><text class="info-label">描述</text><text class="info-value">{{product.desc}}</text></view>
+  </view>
+
+  <view class="section card buy-panel">
+    <view class="buy-row">
+      <view>
+        <view class="section-title">购买数量</view>
+        <view class="subtle">可按喂养周期灵活下单</view>
+      </view>
+      <view class="stepper">
+        <button class="step-btn" bindtap="decrease">-</button>
+        <view class="step-value">{{quantity}}</view>
+        <button class="step-btn" bindtap="increase">+</button>
+      </view>
+    </view>
+    <view class="buy-summary">
+      <text>合计</text>
+      <text class="buy-total">{{product.totalText}}</text>
+    </view>
+    <view class="buy-actions">
+      <button class="btn-ghost action" bindtap="addCart">加入购物车</button>
+      <button class="btn-primary action" bindtap="buyNow">立即购买</button>
+    </view>
+  </view>
+</view>
+

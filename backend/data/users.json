@@ -1,0 +1,27 @@
+[
+  {
+    "userId": "wx_c9b359951c09c5d04de4f852",
+    "profile": {
+      "nickname": "test"
+    },
+    "createdAt": "2026-07-17T02:42:53.313Z",
+    "updatedAt": "2026-07-17T02:42:53.313Z"
+  },
+  {
+    "userId": "wx_6367c48dd193d56ea7b0baad",
+    "profile": {
+      "nickname": "test"
+    },
+    "createdAt": "2026-07-17T02:42:33.404Z",
+    "updatedAt": "2026-07-17T02:42:33.404Z"
+  },
+  {
+    "userId": "wx_0e38479028c4a5f748a4b5d8",
+    "profile": {
+      "nickname": "??????",
+      "source": "miniprogram"
+    },
+    "createdAt": "2026-07-17T02:22:31.894Z",
+    "updatedAt": "2026-07-17T02:23:01.847Z"
+  }
+]

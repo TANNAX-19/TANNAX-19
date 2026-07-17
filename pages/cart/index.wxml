@@ -1,0 +1,36 @@
+<view class="page">
+  <view class="section-title">购物车</view>
+  <view wx:if="{{items.length}}">
+    <view class="card cart-item" wx:for="{{items}}" wx:key="id">
+      <view class="cart-main">
+        <view class="cart-name">{{item.name}}</view>
+        <view class="cart-sub">{{item.spec}}</view>
+      </view>
+      <view class="cart-meta">
+        <text class="cart-price">{{item.priceText}}</text>
+        <view class="stepper">
+          <button class="step-btn" bindtap="decrease" data-id="{{item.id}}" data-quantity="{{item.quantity}}">-</button>
+          <text class="step-value">{{item.quantity}}</text>
+          <button class="step-btn" bindtap="increase" data-id="{{item.id}}" data-quantity="{{item.quantity}}">+</button>
+        </view>
+      </view>
+      <view class="cart-footer">
+        <text class="cart-subtotal">小计 {{item.subtotalText}}</text>
+        <text class="cart-remove" bindtap="remove" data-id="{{item.id}}">删除</text>
+      </view>
+    </view>
+    <view class="card checkout">
+      <view class="checkout-row">
+        <text>合计</text>
+        <text class="checkout-total">{{totalText}}</text>
+      </view>
+      <button class="btn-primary checkout-btn" bindtap="checkout">去结算</button>
+    </view>
+  </view>
+
+  <view wx:else class="card empty">
+    <view class="empty-title">购物车还是空的</view>
+    <view class="subtle">先去首页选择一款适合蜜袋鼯的主粮</view>
+  </view>
+</view>
+

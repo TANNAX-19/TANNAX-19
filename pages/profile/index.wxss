@@ -1,0 +1,95 @@
+.profile {
+  padding: 24rpx;
+  display: flex;
+  align-items: center;
+  gap: 18rpx;
+  margin-bottom: 24rpx;
+}
+
+.avatar {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 28rpx;
+  background: linear-gradient(135deg, #2f7d57 0%, #6ea54a 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36rpx;
+  font-weight: 800;
+}
+
+.profile-name {
+  font-size: 34rpx;
+  font-weight: 700;
+}
+
+.auth,
+.stats,
+.tools {
+  padding: 24rpx;
+  margin-bottom: 24rpx;
+}
+
+.auth-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12rpx;
+}
+
+.auth-label {
+  color: #6f7b72;
+}
+
+.auth-value {
+  font-weight: 600;
+  color: #1f5c40;
+}
+
+.auth-actions {
+  display: flex;
+  gap: 16rpx;
+  margin-top: 18rpx;
+}
+
+.action {
+  flex: 1;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14rpx;
+}
+
+.stat-box {
+  background: #f8fbf8;
+  border-radius: 22rpx;
+  padding: 20rpx;
+}
+
+.stat-value {
+  display: block;
+  font-size: 36rpx;
+  font-weight: 800;
+  color: #1f5c40;
+}
+
+.stat-label {
+  display: block;
+  margin-top: 6rpx;
+  color: #6d7b72;
+  font-size: 22rpx;
+}
+
+.tool-item {
+  padding: 18rpx 0;
+  border-bottom: 1rpx solid #edf0eb;
+  color: #425248;
+}
+
+.tool-item:last-child {
+  border-bottom: none;
+}
+

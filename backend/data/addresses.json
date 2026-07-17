@@ -1,0 +1,16 @@
+[
+  {
+    "id": "ADDR_17842561733304B77",
+    "subjectId": "wx_c9b359951c09c5d04de4f852",
+    "name": "Zhang San",
+    "mobile": "13800000000",
+    "province": "Guangdong",
+    "city": "Shenzhen",
+    "district": "Nanshan",
+    "detail": "Tech Park 1",
+    "isDefault": true,
+    "source": "manual",
+    "createdAt": "2026-07-17T02:42:53.330Z",
+    "updatedAt": "2026-07-17T02:42:53.330Z"
+  }
+]

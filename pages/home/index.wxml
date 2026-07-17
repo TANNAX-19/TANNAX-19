@@ -1,0 +1,57 @@
+<view class="page">
+  <view class="hero card">
+    <view class="hero-top">
+      <view>
+        <view class="hero-kicker">蜜袋鼯私域小店</view>
+        <view class="hero-title">主粮下单更顺手</view>
+        <view class="hero-subtitle">简洁下单、状态清晰、订单随时可查</view>
+      </view>
+      <view class="hero-badge">精选</view>
+    </view>
+    <view class="hero-stats">
+      <view class="stat">
+        <text class="stat-value">{{dashboard.total || 0}}</text>
+        <text class="stat-label">累计订单</text>
+      </view>
+      <view class="stat">
+        <text class="stat-value">{{dashboard.pending || 0}}</text>
+        <text class="stat-label">待付款</text>
+      </view>
+      <view class="stat">
+        <text class="stat-value">{{dashboard.done || 0}}</text>
+        <text class="stat-label">已完成</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">主粮推荐</view>
+    <view class="product-list">
+      <view class="product card" wx:for="{{products}}" wx:key="id" data-id="{{item.id}}" bindtap="goProduct">
+        <view class="product-top">
+          <view class="product-name">{{item.name}}</view>
+          <view class="product-badge">{{item.badge}}</view>
+        </view>
+        <view class="product-subtitle">{{item.subtitle}}</view>
+        <view class="product-tags">
+          <text class="pill" wx:for="{{item.tags}}" wx:for-item="tag" wx:key="*this">{{tag}}</text>
+        </view>
+        <view class="product-bottom">
+          <view>
+            <text class="price">{{item.priceText}}</text>
+            <text class="old-price">{{item.originalPriceText}}</text>
+          </view>
+          <text class="product-link">查看详情</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="section card guide">
+    <view class="section-title">下单逻辑</view>
+    <view class="guide-item">1. 选择蜜袋鼯主粮规格</view>
+    <view class="guide-item">2. 加入购物车或直接购买</view>
+    <view class="guide-item">3. 提交订单后在“订单”页追踪状态</view>
+  </view>
+</view>
+

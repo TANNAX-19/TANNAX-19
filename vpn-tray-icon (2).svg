@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="256" height="256" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bgBase" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(64 64) scale(56 56)">
+      <stop offset="0" stop-color="#231336"/>
+      <stop offset="0.52" stop-color="#121126"/>
+      <stop offset="1" stop-color="#090B14"/>
+    </radialGradient>
+    <radialGradient id="bgGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(64 62) scale(56 56)">
+      <stop offset="0" stop-color="#FF8BCF" stop-opacity="0.22"/>
+      <stop offset="0.28" stop-color="#B787FF" stop-opacity="0.16"/>
+      <stop offset="0.62" stop-color="#FFB36B" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#FFB36B" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="24" y1="28" x2="104" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFD6EA"/>
+      <stop offset="0.24" stop-color="#FF8CD3"/>
+      <stop offset="0.52" stop-color="#C77CFF"/>
+      <stop offset="0.76" stop-color="#7C9BFF"/>
+      <stop offset="1" stop-color="#6CE6FF"/>
+    </linearGradient>
+    <linearGradient id="innerRing" x1="40" y1="40" x2="90" y2="92" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF4FB"/>
+      <stop offset="0.3" stop-color="#FFC2E3"/>
+      <stop offset="0.63" stop-color="#FF87D5"/>
+      <stop offset="1" stop-color="#FF5FA4"/>
+    </linearGradient>
+    <filter id="softGlow" x="0" y="0" width="128" height="128" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="shadow" x="16" y="16" width="96" height="96" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#040712" flood-opacity="0.34"/>
+    </filter>
+  </defs>
+
+  <circle cx="64" cy="64" r="52" fill="url(#bgBase)"/>
+  <circle cx="64" cy="64" r="52" fill="url(#bgGlow)" filter="url(#softGlow)"/>
+
+  <g filter="url(#shadow)">
+    <circle
+      cx="64"
+      cy="64"
+      r="32"
+      fill="none"
+      stroke="url(#ring)"
+      stroke-width="8"
+      stroke-linecap="round"
+      stroke-dasharray="184 28"
+      stroke-dashoffset="10"
+    />
+    <circle
+      cx="64"
+      cy="64"
+      r="19"
+      fill="none"
+      stroke="url(#innerRing)"
+      stroke-width="6"
+      stroke-linecap="round"
+      stroke-dasharray="86 20"
+      stroke-dashoffset="38"
+    />
+  </g>
+</svg>

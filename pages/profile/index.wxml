@@ -1,0 +1,39 @@
+<view class="page">
+  <view class="card profile">
+    <view class="avatar">{{loggedIn ? '微' : '客'}}</view>
+    <view class="profile-info">
+      <view class="profile-name">{{loggedIn ? '微信用户' : '游客模式'}}</view>
+      <view class="subtle">{{loggedIn ? '订单会按当前微信身份隔离' : '未登录时使用游客身份下单'}}</view>
+      <view class="subtle">备注：{{profile.note}}</view>
+    </view>
+  </view>
+
+  <view class="section card auth">
+    <view class="section-title">账号状态</view>
+    <view class="auth-row">
+      <text class="auth-label">身份</text>
+      <text class="auth-value">{{subjectIdText}}</text>
+    </view>
+    <view class="auth-actions">
+      <button class="btn-primary action" wx:if="{{!loggedIn}}" bindtap="login">{{loggingIn ? '登录中...' : '微信登录'}}</button>
+      <button class="btn-ghost action" wx:if="{{loggedIn}}" bindtap="logout">退出登录</button>
+    </view>
+  </view>
+
+  <view class="section card stats">
+    <view class="section-title">订单看板</view>
+    <view class="stats-grid">
+      <view class="stat-box"><text class="stat-value">{{dashboard.total || 0}}</text><text class="stat-label">总订单</text></view>
+      <view class="stat-box"><text class="stat-value">{{dashboard.pending_payment || 0}}</text><text class="stat-label">待支付</text></view>
+      <view class="stat-box"><text class="stat-value">{{dashboard.shipping || 0}}</text><text class="stat-label">发货中</text></view>
+      <view class="stat-box"><text class="stat-value">{{dashboard.done || 0}}</text><text class="stat-label">已完成</text></view>
+    </view>
+  </view>
+
+  <view class="section card tools">
+    <view class="section-title">快捷入口</view>
+    <view class="tool-item" bindtap="goAddress">收货地址管理</view>
+    <view class="tool-item">售后与客服</view>
+    <view class="tool-item">补货提醒设置</view>
+  </view>
+</view>

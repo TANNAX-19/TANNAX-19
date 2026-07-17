@@ -1,0 +1,65 @@
+<view class="page">
+  <view class="card checkout-head">
+    <view class="section-title">确认订单</view>
+    <view class="subtle">先选择收货地址，再提交订单，之后可在订单详情里完成支付</view>
+  </view>
+
+  <view class="section card">
+    <view class="section-title">收货地址</view>
+    <view wx:if="{{addresses.length}}">
+      <view
+        class="address-item {{selectedAddressId === item.id ? 'active' : ''}}"
+        wx:for="{{addresses}}"
+        wx:key="id"
+        data-id="{{item.id}}"
+        bindtap="selectAddress"
+      >
+        <view class="address-top">
+          <text class="address-name">{{item.name}}</text>
+          <text class="pill" wx:if="{{item.isDefault}}">默认</text>
+        </view>
+        <view class="address-line">{{item.mobile}}</view>
+        <view class="address-line">{{item.province}}{{item.city}}{{item.district}}{{item.detail}}</view>
+      </view>
+    </view>
+    <view wx:else class="empty-tip">
+      暂无收货地址，请先导入微信地址或新建手动地址
+    </view>
+    <view class="address-actions">
+      <button class="btn-ghost action" bindtap="chooseWechatAddress">微信获取收货地址</button>
+      <button class="btn-ghost action" bindtap="goAddressManager">手动地址管理</button>
+    </view>
+  </view>
+
+  <view class="section card">
+    <view class="section-title">商品明细</view>
+    <view class="goods" wx:for="{{items}}" wx:key="id">
+      <view class="goods-name">{{item.name}}</view>
+      <view class="goods-row">
+        <text class="subtle">x{{item.quantity}}</text>
+        <text class="goods-price">{{item.subtotalText}}</text>
+      </view>
+    </view>
+    <view class="order-total-row">
+      <text>合计</text>
+      <text class="order-total">{{totalText}}</text>
+    </view>
+  </view>
+
+  <view class="section card">
+    <view class="section-title">订单备注</view>
+    <textarea
+      class="note"
+      placeholder="可填写口味偏好、送货备注等"
+      bindinput="bindNote"
+    ></textarea>
+  </view>
+
+  <view class="checkout-bar card">
+    <view>
+      <view class="subtle">当前支付状态</view>
+      <view class="checkout-status">待支付</view>
+    </view>
+    <button class="btn-primary checkout-btn" bindtap="submitOrder" loading="{{loading}}">提交订单</button>
+  </view>
+</view>

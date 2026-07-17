@@ -1,0 +1,39 @@
+[
+  {
+    "id": "p001",
+    "name": "经典主粮 500g",
+    "subtitle": "均衡营养，日常主食首选",
+    "price": 68,
+    "originalPrice": 78,
+    "tags": ["日常款", "高适口"],
+    "spec": "500g / 约25餐",
+    "desc": "适合成年蜜袋鼯日常主食，强调稳定营养与适口性。",
+    "badge": "热卖",
+    "active": true
+  },
+  {
+    "id": "p002",
+    "name": "高蛋白主粮 400g",
+    "subtitle": "适合成长与高活动期",
+    "price": 79,
+    "originalPrice": 89,
+    "tags": ["高蛋白", "成长期"],
+    "spec": "400g / 约20餐",
+    "desc": "更适合成长期、活动量更大的蜜袋鼯。",
+    "badge": "推荐",
+    "active": true
+  },
+  {
+    "id": "p003",
+    "name": "低敏轻食主粮 450g",
+    "subtitle": "温和配方，肠胃友好",
+    "price": 72,
+    "originalPrice": 82,
+    "tags": ["低敏", "肠胃友好"],
+    "spec": "450g / 约22餐",
+    "desc": "配方更温和，适合敏感体质或换粮期。",
+    "badge": "安心",
+    "active": true
+  }
+]
+

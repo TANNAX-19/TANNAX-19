@@ -1,0 +1,6 @@
+{"dispatch_id":"DSP-001","task_id":"PO-001","owner_role":"product_owner","action":"start_task","reason":"Priority and dependency check passed.","dispatched_at":"2026-05-26T13:01:19.0901347Z"}
+{"dispatch_id":"DSP-002","task_id":"ARC-001","owner_role":"architect","action":"start_task","reason":"Priority and dependency check passed.","dispatched_at":"2026-05-26T13:01:19.2022934Z"}
+{"dispatch_id":"DSP-003","task_id":"DEV-001","owner_role":"developer","action":"start_task","reason":"Priority and dependency check passed.","dispatched_at":"2026-05-26T13:01:19.2183807Z"}
+{"dispatch_id":"DSP-004","task_id":"DEV-001","owner_role":"developer","action":"resume_with_mock","reason":"PM decision for env blocker","dispatched_at":"2026-05-26T13:01:19.2319732Z"}
+{"dispatch_id":"DSP-005","task_id":"PLT-001","owner_role":"platform","action":"start_task","reason":"Priority and dependency check passed.","dispatched_at":"2026-05-26T13:01:19.2319732Z"}
+{"dispatch_id":"DSP-006","task_id":"QA-001","owner_role":"qa","action":"start_task","reason":"Priority and dependency check passed.","dispatched_at":"2026-05-26T13:01:19.2615304Z"}
